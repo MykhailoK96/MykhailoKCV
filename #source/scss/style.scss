@@ -1,0 +1,336 @@
+// File null
+
+//skills-icon font
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?aujar9");
+  src: url("../fonts/icomoon.eot?aujar9#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?aujar9") format("truetype"), url("../fonts/icomoon.woff?aujar9") format("woff"),
+    url("../fonts/icomoon.svg?aujar9#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mongo:before {
+  content: "\e900";
+}
+.icon-sass:before {
+  content: "\e901";
+}
+.icon-redux:before {
+  content: "\e902";
+}
+.icon-react:before {
+  content: "\e903";
+}
+.icon-css:before {
+  content: "\e904";
+}
+.icon-html:before {
+  content: "\e905";
+}
+.icon-js:before {
+  content: "\e906";
+}
+.icon-node1:before {
+  content: "\e907";
+}
+
+@import "_startconf";
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"); */
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1000px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 1000px;
+  margin: 50px;
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+  .left_Side {
+    position: relative;
+    background: #003147;
+    padding: 40px;
+    //======================== profile Text
+
+    .profileText {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      .imgBx {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      h2 {
+        color: #fff;
+        font-size: 1.5em;
+        margin-top: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        line-height: 1.4em;
+        span {
+          font-size: 0.8em;
+          font-weight: 300;
+        }
+      }
+    }
+    //======================== Contact info
+
+    .contactInfo {
+      padding-top: 40px;
+      .title {
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+      }
+      ul {
+        position: relative;
+        li {
+          position: relative;
+          margin: 10px 0;
+          cursor: pointer;
+          .icon {
+            display: inline-block;
+            width: 30px;
+            font-size: 18px;
+            color: #03a9f4;
+          }
+          span {
+            color: #fff;
+            font-weight: 300;
+          }
+        }
+      }
+      &.education {
+        li {
+          margin-bottom: 15px;
+        }
+        h5 {
+          color: #03a9f4;
+          margin: 20px 0 10px 0;
+          font-weight: 500;
+          font-size: 13.28px;
+        }
+        h4 {
+          color: #fff;
+          font-weight: 300;
+          font-size: 16px;
+
+          &:nth-child(2) {
+            font-weight: 500;
+          }
+        }
+      }
+
+      &.language {
+        .percent {
+          position: relative;
+          width: 100%;
+          height: 6px;
+          background: #081921;
+          display: block;
+          margin-top: 5px;
+          div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+          }
+        }
+      }
+    }
+  }
+  .right_Side {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #fff;
+    padding: 40px;
+    .about {
+      margin-bottom: 50px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .title2 {
+        color: #003147;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+        .year_company {
+          min-width: 150px;
+          h5 {
+            text-transform: uppercase;
+            color: #848c90;
+            font-weight: 600;
+          }
+        }
+        .text {
+          h4 {
+            text-transform: uppercase;
+            color: #2a7da2;
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+      }
+      //================skills====
+      &.skills {
+        .tech {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          gap: 0px 0px;
+          height: 300px;
+
+          .box {
+            position: relative;
+            width: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+            transition-delay: background color 0.5s;
+            cursor: pointer;
+            i {
+              font-size: 72px;
+              color: #03a9f4;
+            }
+            &:hover {
+              background: #003147;
+              transform: rotateX(360deg);
+              i {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      //=====================interest
+      &.interest {
+        ul {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          li {
+            color: #333;
+            font-weight: 500;
+            margin: 10px 0;
+            .fa {
+              color: #03a9f4;
+              font-size: 18px;
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    .right_Side {
+      .about {
+        &.interest {
+          ul {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    .right_Side {
+      .about {
+        .box {
+          flex-direction: column;
+          align-items: flex-start;
+          .year_company {
+            margin-bottom: 5px;
+          }
+        }
+        &.interest {
+          ul {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+        &.skills {
+          .box {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+      }
+    }
+  }
+}
